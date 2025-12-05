@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NgIcon } from '@ng-icons/core';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [CommonModule, RouterLink, RouterLinkActive, NgIcon],
+  imports: [CommonModule, RouterLink, NgIcon],
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.css',
 })
