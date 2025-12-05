@@ -1,0 +1,29 @@
+<div class="sidebar">
+  <div class="sidebar-header">
+    <h2>RAS Control</h2>
+    <p>Sistema de Controle</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <ul class="nav-list">
+      <li class="nav-item" *ngFor="let item of menuItems">
+        <a
+          [routerLink]="item.route"
+          routerLinkActive="active"
+          [class.active]="item.action === currentView"
+          class="nav-link"
+          (click)="onMenuClick(item.action!)">
+          <ng-icon [name]="item.icon" class="nav-icon"></ng-icon>
+          <span class="nav-text">{{ item.title }}</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="sidebar-footer">
+    <button class="btn-logout" (click)="logout()">
+      <ng-icon name="lucideLogOut" class="nav-icon"></ng-icon>
+      <span class="nav-text">Sair</span>
+    </button>
+  </div>
+</div>
